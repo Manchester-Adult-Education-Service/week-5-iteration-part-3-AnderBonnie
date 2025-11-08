@@ -29,8 +29,14 @@
 #     print("Hello " + name)  # loop through and greet
 
 # Write your code below:
+friend1 = input ("Enter the name of your first friend:")
+friend2 = input ("Enter the name of your first friend:")
+friend3 = input ("Enter the name of your first friend:")
 
+friends = [friend1, friend2, friend3]
 
+for friend in friends:
+    print (f"Hello {friend}!")
 
 # -------------------------------------------
 # Task 2: Number Input and Decisions
@@ -59,6 +65,13 @@
 #     print("Message for other cases")
 
 # Write your code below:
+number = int(input ("Please enter a number between 1 and 10:"))
+if number < 1:
+    print ("The number is too low. Try again")
+elif number > 10:
+    print ("The number is too high. Try again")
+else:
+    print ("The number is within the correct range")
 
 
 
@@ -84,8 +97,22 @@
 #     #     print("Check your answer")
 
 # Write your code below:
-
-
+questions = [
+    "What is 2 + 2?:"
+    "Type the colour of the sky:"
+    "What is the first letter of the alphabet?:"
+]
+answers = [
+    "4"
+    "Blue"
+    "a"
+]
+for i in range(len(questions)):
+    answer = input(questions[i]+"")
+    if answer.lower() == answers[i]:
+        print ("Correct!")
+else :
+    print ("Try again!")        
 
 # -------------------------------------------
 # EXTENSION ACTIVITIES
@@ -106,6 +133,18 @@
 #     answer = input("Try again: ")
 
 # Write your code below:
+text_answer = input ("Enter something (it cannot be empty):")
+while not text_answer.strip():
+    print("You must type something.")
+    text_answer = input ("Try again:")
+
+while True:
+    number = int(input("Enter a number between 1 and 100:"))
+    if 1<= number <= 100:
+        print("Thank you for the valid number")
+        break
+    else:
+        print("The number is out of range. Please try again.:")
 
 
 
